@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="password-screen">
+
+    <div class="password-box">
+
+        <div class="lock">🔐</div>
+
+        <h2>Secret Message</h2>
+
+        <p>Passwordiig yaj olhu 0000 geed buudaad vz🤔</p>
+
+        <input
+            type="password"
+            id="password-input"
+            placeholder="Password"
+            maxlength="4"
+        >
+
+        <button
+            class="password-button"
+            onclick="checkPassword()"
+        >
+            Enter
+        </button>
+
+        <p id="password-message"></p>
+
+    </div>
+
+</div>
+
+    <!-- HOME -->
+    <div id="home">
+
+        <h1>✨생일 축하해용✨</h1>
+
+        <button class="button-style" onclick="openSurprise()">
+            <span>Open Me</span>
+        </button>
+
+    </div>
+
+
+    <!-- SURPRISE -->
+    <div id="surprise" style="display: none">
+
+        <h2>Your Surprise</h2>
+
+        <div class="cards">
+
+            <button onclick="openLetter()">
+                <img src="letter.png" alt="Letter" style="width: 50px; height: 50px;">
+                <p>LETTER</p>
+            </button>
+
+            <button onclick="openFlowers()">
+                <img src="rose.png" alt="rose" style="width: 50px; height: 50px;">
+                <p>FLOWER</p>
+            </button>
+
+            <button onclick="openCake()">
+                <img src="icake.png" alt="Cake">
+                <p>CAKE</p>
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- LETTER -->
+    <div id="letter" style="display: none">
+         <h1 style="font-family: fantasy; color:#555555;"> For You </h1>
+
+    <div class="envelope-wrapper" onclick="openEnvelope(this)">
+
+       
+
+        <!-- THE LETTER -->
+       <div style="font-family: fantasy;" class="envelope-letter">
+
+    <img src="IMG_1823.jpg" class="letter-photo">
+
+    <div id="letter-message"></div>
+
+</div>
+
+
+        <!-- ENVELOPE -->
+        <div class="envelope-box">
+
+            <div class="envelope-flap"></div>
+
+            <div class="envelope-front"></div>
+
+        </div>
+
+    </div>
+
+
+    <button onclick="closeLetter()">
+        Back
+    </button>
+
+</div>
+
+
+    <!-- FLOWERS -->
+    <div id="flowers" style="display: none">
+
+        <h2 style="font-family: fantasy; color:#555555;">🌸 Flowers For You 🌸</h2>
+
+        <div class="flower">
+            <img src="pinkRose.jpeg" class="flower-image">
+        </div>
+
+        <p style="font-family: fantasy;">
+            These flowers are for the most special person 💖
+        </p>
+
+        <button onclick="closeFlowers()">
+            Back
+        </button>
+
+    </div>
+
+
+    <!-- CAKE -->
+    <div id="cake" style="display: none">
+
+        <h2 style="font-family: fantasy; color:#555555;" >🎂 Happy Birthday 🎂</h2>
+
+    <div class="cake-container">
+
+            <div id="countdown">3</div>
+
+            <img src="birthdayCake.png" id="cake-image" class="cake-image">
+
+            <p id="cake-message"></p>
+
+    </div>
+        <p style="font-family: fantasy;">
+            “Хүсэл шивнээд 3 тоолоод үлээгээрэй” ✨💖
+        </p>
+
+        <button onclick="closeCake()">
+            Back
+        </button>
+
+    </div>
+
+    <div class="photo-background">
+    <div class="photo-strip strip-left">
+        <img src="IMG_1.jpg">
+        <img src="IMG_2.jpg">
+        <img src="IMG_3.jpg">
+        <img src="IMG_4.jpg">
+        <img src="IMG_1.jpg">
+        <img src="IMG_2.jpg">
+        <img src="IMG_3.jpg">
+        <img src="IMG_4.jpg">
+    </div>
+
+    <div class="photo-strip strip-right">
+        <img src="IMG_4.jpg">
+        <img src="IMG_3.jpg">
+        <img src="IMG_2.jpg">
+        <img src="IMG_1.jpg">
+        <img src="IMG_4.jpg">
+        <img src="IMG_3.jpg">
+        <img src="IMG_2.jpg">
+        <img src="IMG_1.jpg">
+    </div>
+</div>
+
+
+    <!-- HEARTS -->
+    <div class="hearts">
+        💗 💕 💖 💕 💗
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
