@@ -1072,3 +1072,103 @@ body::before {
         opacity: 0;
     }
 }
+
+/* =========================
+   MOBILE BLOCK
+========================= */
+
+#mobile-block {
+    display: none;
+}
+
+
+/* УТАС ДЭЭР */
+
+@media (max-width: 768px) {
+
+    #mobile-block {
+        position: fixed;
+        inset: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 100vw;
+        height: 100vh;
+
+        padding: 25px;
+
+        background: linear-gradient(
+            135deg,
+            #ffd6e7,
+            #fff0f6
+        );
+
+        z-index: 999999;
+    }
+
+    .mobile-message {
+        width: 100%;
+        max-width: 380px;
+
+        padding: 35px 25px;
+
+        background: rgba(255, 255, 255, 0.95);
+
+        border-radius: 30px;
+
+        text-align: center;
+
+        box-shadow:
+            0 15px 40px rgba(255, 79, 145, 0.2);
+
+        animation: mobilePopup 0.7s ease;
+    }
+
+    .mobile-icon {
+        font-size: 55px;
+        margin-bottom: 15px;
+    }
+
+    .mobile-message h2 {
+        color: #ff4f91;
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+
+    .mobile-message p {
+        color: #555;
+        font-size: 17px;
+        line-height: 1.8;
+        margin: 15px 0;
+    }
+
+    .mobile-message b {
+        color: #ff4f91;
+    }
+
+    .laptop-icon {
+        font-size: 65px;
+        margin: 20px 0 5px;
+    }
+
+    .small-text {
+        font-size: 14px !important;
+        color: #999 !important;
+    }
+}
+
+
+@keyframes mobilePopup {
+
+    from {
+        opacity: 0;
+        transform: scale(0.85) translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
